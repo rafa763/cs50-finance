@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register"  method="post">
+        <div class="form-group">
+        <input class="form-control" name="username" autofocus autocomplete="off" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+        <input class="form-control" id="p1" name="password" autocomplete="off" placeholder="Password" type="password">
+        <span id = "message1" style="color:red"> </span>
+        </div>
+        <div class="form-group">
+        <input class="form-control" id="p2" name="confirmation" autocomplete="off" placeholder="Password (again)" type="password">
+        <span id = "message2" style="color:red"> </span>
+        </div>
+        <button class="btn btn-primary" id="button" type="submit">Register</button>
+    </form>
+{% endblock %}
+
+{% block javascript %}
+    <script src="./static/validate.js"></script>
+{% endblock %}
